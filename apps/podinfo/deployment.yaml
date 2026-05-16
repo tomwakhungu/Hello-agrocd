@@ -22,7 +22,7 @@ spec:
         - name: PODINFO_UI_COLOR
           value: "#FF5722"
         - name: PODINFO_UI_MESSAGE
-          value: "v2.0 - Auto Deployed by ArgoCD 🚀"
+          value: "live demo 🚀"
 ---
 apiVersion: v1
 kind: Service
