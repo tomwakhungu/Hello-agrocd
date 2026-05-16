@@ -1,0 +1,37 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: podinfo-frontend
+  namespace: default
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: podinfo-frontend
+  template:
+    metadata:
+      labels:
+        app: podinfo-frontend
+    spec:
+      containers:
+      - name: podinfo
+        image: ghcr.io/stefanprodan/podinfo:6.7.0
+        ports:
+        - containerPort: 9898
+        env:
+        - name: PODINFO_UI_COLOR
+          value: "#2196F3"
+        - name: PODINFO_UI_MESSAGE
+          value: "FRONTEND - GitOps Demo"
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: podinfo-frontend
+  namespace: default
+spec:
+  selector:
+    app: podinfo-frontend
+  ports:
+  - port: 80
+    targetPort: 9898
