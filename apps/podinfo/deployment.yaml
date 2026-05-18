@@ -21,7 +21,7 @@ spec:
         - name: PODINFO_UI_COLOR
           value: "#FF5722"
         - name: PODINFO_UI_MESSAGE
-          value: "GitOps is Live - Auto Deployed!"
+          value: "Deployed by GitOps - No kubectl needed!"
 ---
 apiVersion: v1
 kind: Service
