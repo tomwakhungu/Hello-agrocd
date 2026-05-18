@@ -22,7 +22,7 @@ spec:
         - name: PODINFO_UI_COLOR
           value: "#FF5722"
         - name: PODINFO_UI_MESSAGE
-          value: "live demo 🚀"
+          value: "GitOps is Live - Auto Deployed!"
 ---
 apiVersion: v1
 kind: Service
