@@ -4,7 +4,7 @@ metadata:
   name: podinfo-frontend
   namespace: default
 spec:
-  replicas: 2
+  replicas: 8
   selector:
     matchLabels:
       app: podinfo-frontend
